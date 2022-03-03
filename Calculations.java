@@ -15,23 +15,23 @@ public class Calculations implements TeamTask {
     }
 
     //Milos
-    public double mean(ArrayList<Double> list) {
+    public double mean() {
         return 0.0;
     }
     //Milos
-    public double mode(ArrayList<Double> list) {
+    public double mode() {
         return 0.0;
     }   
     //Milos
-    public boolean search(ArrayList<Double> list, Double num) {
+    public boolean search(Double num) {
         return true;
     }
     //Milos
-    public double range(ArrayList<Double> list) {
+    public double range() {
         return 0.0;
     }
     //Returns random number from the list
-    public double randNum(ArrayList<Double> list) {
+    public double randNum() {
         Random rand = new Random();
         int int_random = rand.nextInt(list.size() );
         double random_num_list = list.get(int_random);
@@ -50,54 +50,54 @@ public class Calculations implements TeamTask {
         return temp.get(0);
     }
     //Danial
-    public ArrayList<Double> sortAsc(ArrayList<Double> list) {
+    public ArrayList<Double> sortAsc() {
         return list;
     }
     //Danial
-    public ArrayList<Double> sortDesc(ArrayList<Double> list) {
+    public ArrayList<Double> sortDesc() {
         return list;
     }
     //Danial
-    public double evenOdd(ArrayList<Double> list, int num) {
+    public double evenOdd(int num) {
         return 0.0;
     }
 
     //Stephen
-    public double factorial(ArrayList<Double> list) {
+    public double factorial() {
         return 0.0;
     }
     //Stephen
-    public double sum(ArrayList<Double> list) {
+    public double sum() {
         return 0.0;
     }
     //Stephen
-    public double powerOf(ArrayList<Double> list, Double num) {
+    public double powerOf(Double num) {
         return 0.0;
     }
     //Stephen
-    public double median(ArrayList<Double> list) {
+    public double median() {
         return 0.0;
     }
     
     //Sorting can be ascending and descending
 
     //Daniel does these:
-    public ArrayList<Double> bubbleSort(ArrayList<Double> list) {
+    public ArrayList<Double> bubbleSort() {
         return list;
     }
-    public ArrayList<Double> selectionSort(ArrayList<Double> list) {
+    public ArrayList<Double> selectionSort() {
         return list;
     }
-    public ArrayList<Double> insertionSort(ArrayList<Double> list) {
+    public ArrayList<Double> insertionSort() {
         return list;
     }
-    public ArrayList<Double> quickSort(ArrayList<Double> list) {
+    public ArrayList<Double> quickSort() {
         return list;
     }
-    public ArrayList<Double> mergeSort(ArrayList<Double> list) {
+    public ArrayList<Double> mergeSort() {
         return list;
     }
-    public ArrayList<Double> heapSort(ArrayList<Double> list) {
+    public ArrayList<Double> heapSort() {
         return list;
     }
     
