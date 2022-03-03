@@ -1,2 +1,2 @@
 language = "java"
-run = "java Main.java"
+run = "javac Main.java && java Main"
