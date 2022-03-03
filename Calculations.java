@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Calculations implements TeamTask {
 
@@ -25,12 +26,15 @@ public class Calculations implements TeamTask {
         return true;
     }
     //Milos
-    public double randNum(ArrayList<Double> list) {
+    public double range(ArrayList<Double> list) {
         return 0.0;
     }
     //Milos
-    public double range(ArrayList<Double> list) {
-        return 0.0;
+    public double randNum(ArrayList<Double> list) {
+        Random rand = new Random();
+        int int_random = rand.nextInt(list.size() );
+        double random_num_list = list.get(int_random);
+        return random_num_list;
     }
     //Danial
     public double evenOdd(ArrayList<Double> list, int num) {

@@ -23,7 +23,6 @@ public class Main {
         Calculations calculations = new Calculations(list);
 
         System.out.println(calculations.getList());
-
         sc.close();
 
     }
