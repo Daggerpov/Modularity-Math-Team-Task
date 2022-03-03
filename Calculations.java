@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Calculations implements TeamTask {
 
@@ -67,8 +68,33 @@ public class Calculations implements TeamTask {
         return temp;
     }
     //Danial
-    public double evenOdd(int num) {
-        return 0.0;
+    public ArrayList<Double> evenOdd() {
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        while (true) {
+            System.out.println("Type 1 to print all odd numbers and 2 to print even numbers: ");
+            num = sc.nextInt();
+            if (num == 1 || num == 2) {
+                break;
+            }
+        }
+
+        sc.close();
+
+        ArrayList<Double> temp = new ArrayList<Double>();
+        for (double i : list) {
+            if (i % 2 == 0) {
+                if (num == 2) {
+                    temp.add(i);
+                }
+            } else {
+                if (num == 1) {
+                    temp.add(i);
+                }
+            }
+        }
+        return temp;
     }
 
     //Stephen

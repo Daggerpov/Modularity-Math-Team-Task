@@ -26,8 +26,8 @@ interface TeamTask {
     double randNum();
     //Stephen
     double powerOf(Double num);
-    //Milos
-    double evenOdd(int num);
+    //Danial
+    ArrayList<Double> evenOdd();
     
     //Sorting can be ascending and descending
     //Danial
