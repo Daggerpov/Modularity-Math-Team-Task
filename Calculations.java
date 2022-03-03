@@ -68,7 +68,11 @@ public class Calculations implements TeamTask {
     }
     //Stephen
     public double sum() {
-        return 0.0;
+        Double sum = 0.0;
+        for (Double d : list) {
+            sum += d;
+        }
+        return sum;
     }
     //Stephen
     public double powerOf(Double num) {

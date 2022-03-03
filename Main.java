@@ -24,6 +24,7 @@ public class Main {
 
         System.out.println(calculations.max());
         System.out.println(calculations.min());
+        System.out.println(calculations.sum());
         sc.close();
 
     }
