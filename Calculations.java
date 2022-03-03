@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 public class Calculations implements TeamTask {
 
@@ -37,16 +38,16 @@ public class Calculations implements TeamTask {
         return random_num_list;
     }
     //Danial
-    public double evenOdd(ArrayList<Double> list, int num) {
-        return 0.0;
+    public double max() {
+        ArrayList<Double> temp = list;
+        Collections.sort(temp);
+        return temp.get(temp.size() - 1);
     }
     //Danial
-    public double max(ArrayList<Double> list) {
-        return 0.0;
-    }
-    //Danial
-    public double min(ArrayList<Double> list) {
-        return 0.0;
+    public double min() {
+        ArrayList<Double> temp = list;
+        Collections.sort(temp);
+        return temp.get(0);
     }
     //Danial
     public ArrayList<Double> sortAsc(ArrayList<Double> list) {
@@ -55,6 +56,10 @@ public class Calculations implements TeamTask {
     //Danial
     public ArrayList<Double> sortDesc(ArrayList<Double> list) {
         return list;
+    }
+    //Danial
+    public double evenOdd(ArrayList<Double> list, int num) {
+        return 0.0;
     }
 
     //Stephen

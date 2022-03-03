@@ -11,9 +11,9 @@ interface TeamTask {
     //Stephen
     double median(ArrayList<Double> list);
     //Danial
-    double max(ArrayList<Double> list);
+    double max();
     //Danial
-    double min(ArrayList<Double> list);
+    double min();
     //Danial
     double range(ArrayList<Double> list);
     //Milos

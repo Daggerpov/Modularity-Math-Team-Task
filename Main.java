@@ -22,7 +22,8 @@ public class Main {
 
         Calculations calculations = new Calculations(list);
 
-        System.out.println(calculations.getList());
+        System.out.println(calculations.max());
+        System.out.println(calculations.min());
         sc.close();
 
     }
