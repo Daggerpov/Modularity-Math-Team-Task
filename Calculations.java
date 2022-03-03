@@ -22,10 +22,15 @@ public class Calculations implements TeamTask {
     public double mode() {
         return 0.0;
     }   
-    //Milos
-    public boolean search(Double num) {
-        return true;
+    //Searches for input number in list, if number exists, returns true
+    public boolean search(ArrayList<Double> list, Double num) {
+        double searchNum = num;
+        if (list.indexOf(searchNum)>=0)
+            return true;
+        else
+            return false;
     }
+
     //Milos
     public double range() {
         return 0.0;
