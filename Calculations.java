@@ -51,11 +51,15 @@ public class Calculations implements TeamTask {
     }
     //Danial
     public ArrayList<Double> sortAsc() {
-        return list;
+        ArrayList<Double> temp = list;
+        Collections.sort(temp);
+        return temp;
     }
     //Danial
     public ArrayList<Double> sortDesc() {
-        return list;
+        ArrayList<Double> temp = list;
+        Collections.sort(temp, Collections.reverseOrder());
+        return temp;
     }
     //Danial
     public double evenOdd(int num) {
