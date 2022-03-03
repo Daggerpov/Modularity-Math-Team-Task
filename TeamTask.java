@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 interface TeamTask {
 
-    void printList();
+    ArrayList<Double> getList();
 
     //Milos
     double mean(ArrayList<Double> list);
