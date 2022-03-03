@@ -29,7 +29,7 @@ public class Calculations implements TeamTask {
     public double range(ArrayList<Double> list) {
         return 0.0;
     }
-    //Milos
+    //Returns random number from the list
     public double randNum(ArrayList<Double> list) {
         Random rand = new Random();
         int int_random = rand.nextInt(list.size() );
