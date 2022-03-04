@@ -164,7 +164,7 @@ public class Calculations implements TeamTask {
                 if (arr[j] > arr[j+1])
                 {
                     // swap arr[j+1] and arr[j]
-                    int temp = arr[j];
+                    double temp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
