@@ -3,13 +3,25 @@ import java.util.Random;
 import java.util.Collections;
 import java.util.Scanner;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Calculations implements TeamTask {
 
     private ArrayList<Double> list;
+	private Double[] arr;
 
-    public Calculations(ArrayList<Double> l) {
+	public Calculations(ArrayList<Double> l) {
         list = l;
+		// converting array list to regular array to use java sorting algorithms
+		arr = new Double[getList().size()];
+	  	
+		// ArrayList to Array Conversion
+		for (int i = 0; i < (list.size()); i++){
+			arr[i] = list.get(i);
+		}
     }
+	
 
     public ArrayList<Double> getList() {
         return list;
@@ -123,11 +135,31 @@ public class Calculations implements TeamTask {
             return Double.toString(temp.get(temp.size()/2));
         }
     }
-    //Sorting can be ascending and descending
 
+	//helper method to convert list to ArrayList so we can return them in that format
+	private static ArrayList<Double> arrayToArrayList(Double [] arr) {
+		return new ArrayList<>(Arrays.asList(arr));
+	}
+	
+	
+	//Sorting can be ascending and descending
+
+
+	
     //Daniel does these:
     public ArrayList<Double> bubbleSort() {
-        return list;
+		// int n = arr.length;
+  //       for (int i = 0; i < n-1; i++)
+  //           for (int j = 0; j < n-i-1; j++)
+  //               if (arr[j] > arr[j+1])
+  //               {
+  //                   // swap arr[j+1] and arr[j]
+  //                   int temp = arr[j];
+  //                   arr[j] = arr[j+1];
+  //                   arr[j+1] = temp;
+  //               }
+        
+		return arrayToArrayList(arr);
     }
     public ArrayList<Double> selectionSort() {
         return list;
