@@ -23,6 +23,8 @@ public class Main {
         Calculations calculations = new Calculations(list);
 
 		System.out.println(calculations.bubbleSort());
+		System.out.println(calculations.selectionSort());
+		System.out.println(calculations.insertionSort());
 		
 
         System.out.println(calculations.max());
