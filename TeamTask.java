@@ -19,7 +19,7 @@ interface TeamTask {
     //Milos
     boolean search(Double num);
     //Stephen
-    double factorial(); //List of factorials
+    ArrayList<Double> factorial(); //List of factorials
     //Stephen
     double sum(); //Sum of list
     //Milos
