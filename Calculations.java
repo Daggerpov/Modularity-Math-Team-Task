@@ -140,7 +140,7 @@ public class Calculations implements TeamTask {
         ArrayList<Double> temp = list;
         Collections.sort(temp);
         if (temp.size()%2 == 0) {
-            return Double.toString(temp.get(temp.size()/2)) + ", " + Double.toString(temp.get((temp.size()/2) + 1));
+            return Double.toString(temp.get(temp.size()/2 - 1)) + ", " + Double.toString(temp.get((temp.size()/2)));
         } else {
             return Double.toString(temp.get(temp.size()/2));
         }
