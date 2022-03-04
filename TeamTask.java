@@ -9,7 +9,7 @@ interface TeamTask {
     //Milos
     double mode(); 
     //Stephen
-    double median();
+    String median();
     //Danial
     double max();
     //Danial

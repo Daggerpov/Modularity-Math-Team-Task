@@ -24,7 +24,7 @@ public class Calculations implements TeamTask {
         return 0.0;
     }   
     //Searches for input number in list, if number exists, returns true
-    public boolean search(ArrayList<Double> list, Double num) {
+    public boolean search(Double num) {
         double searchNum = num;
         if (list.indexOf(searchNum)>=0)
             return true;
@@ -114,10 +114,15 @@ public class Calculations implements TeamTask {
         return 0.0;
     }
     //Stephen
-    public double median() {
-        return 0.0;
+    public String median() {
+        ArrayList<Double> temp = list;
+        Collections.sort(temp);
+        if (temp.size()%2 == 0) {
+            return Double.toString(temp.get(temp.size()/2)) + ", " + Double.toString(temp.get((temp.size()/2) + 1));
+        } else {
+            return Double.toString(temp.get(temp.size()/2));
+        }
     }
-    
     //Sorting can be ascending and descending
 
     //Daniel does these:
