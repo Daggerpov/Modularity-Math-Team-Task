@@ -22,6 +22,7 @@ public class Main {
 
         Calculations calculations = new Calculations(list);
 
+<<<<<<< HEAD
 		System.out.println(calculations.bubbleSort());
 				
         // System.out.println(calculations.max());
@@ -31,6 +32,16 @@ public class Main {
         // System.out.println(calculations.sortAsc());
         // System.out.println(calculations.sortDesc());
         // System.out.println(calculations.evenOdd());
+=======
+        System.out.println(calculations.max());
+        System.out.println(calculations.min());
+        System.out.println(calculations.sum());
+        System.out.println(calculations.median());
+        System.out.println(calculations.factorial());
+        System.out.println(calculations.sortAsc());
+        System.out.println(calculations.sortDesc());
+        System.out.println(calculations.evenOdd());
+>>>>>>> origin/main
         sc.close();
 
     }

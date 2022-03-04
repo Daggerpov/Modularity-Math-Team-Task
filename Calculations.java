@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Collections;
 import java.util.Scanner;
+import java.lang.Math;
 
 import java.util.Arrays;
 import java.util.List;
@@ -110,8 +111,17 @@ public class Calculations implements TeamTask {
     }
 
     //Stephen
-    public double factorial() {
-        return 0.0;
+    public ArrayList<Double> factorial() {
+        ArrayList<Double> temp = new ArrayList<Double>();
+        double fact = 1.0;
+        for (double d : list) {
+            fact = 1.0;
+            for (int i = 1; i <= (int) Math.round(d); i++) {
+                fact *= (double) i;
+            }
+            temp.add(fact);
+        }
+        return temp;
     }
     //Stephen
     public double sum() {
