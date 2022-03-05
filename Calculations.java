@@ -132,8 +132,16 @@ public class Calculations implements TeamTask {
         return sum;
     }
     //Stephen
-    public double powerOf(Double num) {
-        return 0.0;
+    public ArrayList<Double> powerOf() {
+        Scanner input = new Scanner(System.in);
+        ArrayList<Double> temp = new ArrayList<Double>();
+        System.out.println("What exponent should be applied to the numbers?");
+        double num = input.nextDouble();
+        input.close();
+        for (double d : list) {
+            temp.add(Math.pow(d, num)); 
+        }
+        return temp;
     }
     //Stephen
     public String median() {

@@ -25,7 +25,7 @@ interface TeamTask {
     //Milos
     double randNum();
     //Stephen
-    double powerOf(Double num);
+    ArrayList<Double> powerOf();
     //Danial
     ArrayList<Double> evenOdd();
     

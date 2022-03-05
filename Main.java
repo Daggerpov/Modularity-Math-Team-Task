@@ -32,9 +32,10 @@ public class Main {
         System.out.println(calculations.sum());
         System.out.println(calculations.median());
         System.out.println(calculations.factorial());
+        System.out.println(calculations.powerOf());
         System.out.println(calculations.sortAsc());
         System.out.println(calculations.sortDesc());
-        System.out.println(calculations.evenOdd());
+        // System.out.println(calculations.evenOdd()); *DANIAL CHEKC THIS OUT, NOT SURE WHY IT BUGS*
 
         sc.close();
 
