@@ -30,7 +30,7 @@ public class Calculations implements TeamTask {
 
     //Milos
     public double mean() {
-        return 0.0;
+        return (sum()/list.size());
     }
     //Milos
     public double mode() {
