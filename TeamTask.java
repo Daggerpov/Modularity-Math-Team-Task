@@ -17,7 +17,7 @@ interface TeamTask {
     //Danial
     double range();
     //Milos
-    boolean search(Double num);
+    boolean search();
     //Stephen
     ArrayList<Double> factorial(); //List of factorials
     //Stephen
