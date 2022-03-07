@@ -26,7 +26,8 @@ public class Main {
 
         while(exit) {
             System.out.println("What do you want to do? Type '0' to exit: ");
-            System.out.println("1. Get list\n2. Get mean\n3. Get mode\n4. Get median\n5. Get max\n6. Get min\n7. Get range\n8. Find if a number exists\n9. Get the factiorial of each int\n10. Get the sum of the list\n11. Get a random value from the list\n12. Take power of each number\n13. Find all even or odd numbers\n14. Sort by ascending\n15. Sort by descending\n16. Bubble sort\n17. Selection sort\n18. Insertion sort\n19. Quick sort\n20. Merge sort\n21. Heap sort");
+            System.out.println("1. Get list\n2. Get mean\n3. Get mode\n4. Get median\n5. Get max\n6. Get min\n7. Get range\n8. Find if a number exists\n9. Get the factiorial of each int\n10. Get the sum of the list\n11. Get a random value from the list\n12. Take power of each number\n13. Find all even or odd numbers\n14. Sort by ascending\n15. Sort by descending\n16. Bubble sort\n17. Selection sort\n18. Insertion sort");
+            //System.out.println("19. Quick sort\n20. Merge sort\n21. Heap sort");
             int num = sc.nextInt();
             switch(num) {
                 case 0:
@@ -86,17 +87,17 @@ public class Main {
                 case 18:
                     System.out.println(calculations.insertionSort());
                     break;
-                case 19:
-                    System.out.println(calculations.quickSort());
-                    break;
-                case 20:
-                    System.out.println(calculations.mergeSort());
-                    break;
-                case 21:
-                    System.out.println(calculations.heapSort());
-                    break;
+                // case 19:
+                //     System.out.println(calculations.quickSort());
+                //     break;
+                // case 20:
+                //     System.out.println(calculations.mergeSort());
+                //     break;
+                // case 21:
+                //     System.out.println(calculations.heapSort());
+                //     break;
                 default:
-                    System.out.println("Please enter a valid");
+                    System.out.println("Please enter a valid option.");
             }
         }
 

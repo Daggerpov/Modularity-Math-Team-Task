@@ -172,20 +172,20 @@ public class Calculations implements TeamTask {
 	
     //Daniel does these:
     public ArrayList<Double> bubbleSort() {
-		int n = arr.length;
+		int n = this.arr.length;
         for (int i = 0; i < n-1; i++)
             for (int j = 0; j < n-i-1; j++)
-                if (arr[j] > arr[j+1])
+                if (this.arr[j] > this.arr[j+1])
                 {
                     // swap arr[j+1] and arr[j]
-                    double temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    double temp = this.arr[j];
+                    this.arr[j] = arr[j+1];
+                    this.arr[j+1] = temp;
                 }
-		return arrayToArrayList(arr);
+		return arrayToArrayList(this.arr);
     }
     public ArrayList<Double> selectionSort() {
-        int n = arr.length;
+        int n = this.arr.length;
   
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < n-1; i++)
@@ -193,42 +193,42 @@ public class Calculations implements TeamTask {
             // Find the minimum element in unsorted array
             int min_idx = i;
             for (int j = i+1; j < n; j++)
-                if (arr[j] < arr[min_idx])
+                if (this.arr[j] < this.arr[min_idx])
                     min_idx = j;
   
             // Swap the found minimum element with the first
             // element
             double temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            this.arr[min_idx] = arr[i];
+            this.arr[i] = temp;
         }
-		return arrayToArrayList(arr);
+		return arrayToArrayList(this.arr);
     }
     public ArrayList<Double> insertionSort() {
-        int n = arr.length;
+        int n = this.arr.length;
         for (int i = 1; i < n; ++i) {
-            double key = arr[i];
+            double key = this.arr[i];
             int j = i - 1;
  
             /* Move elements of arr[0..i-1], that are
                greater than key, to one position ahead
                of their current position */
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
+            while (j >= 0 && this.arr[j] > key) {
+                this.arr[j + 1] = this.arr[j];
                 j = j - 1;
             }
-            arr[j + 1] = key;
+            this.arr[j + 1] = key;
         }
-		return arrayToArrayList(arr);
+		return arrayToArrayList(this.arr);
     }
-    public ArrayList<Double> quickSort() {
-        return list;
-    }
-    public ArrayList<Double> mergeSort() {
-        return list;
-    }
-    public ArrayList<Double> heapSort() {
-        return list;
-    }
+    // public ArrayList<Double> quickSort() {
+    //     return list;
+    // }
+    // public ArrayList<Double> mergeSort() {
+    //     return list;
+    // }
+    // public ArrayList<Double> heapSort() {
+    //     return list;
+    // }
     
 }

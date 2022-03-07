@@ -40,8 +40,8 @@ interface TeamTask {
     ArrayList<Double> bubbleSort();
     ArrayList<Double> selectionSort();
     ArrayList<Double> insertionSort();
-    ArrayList<Double> quickSort();
-    ArrayList<Double> mergeSort();
-    ArrayList<Double> heapSort();
+    // ArrayList<Double> quickSort();
+    // ArrayList<Double> mergeSort();
+    // ArrayList<Double> heapSort();
 
 }
