@@ -24,18 +24,18 @@ public class Calculations implements TeamTask {
 	
 
     public ArrayList<Double> getList() {
-        return list;
+        return this.list;
     }
 
     //Milos
     public double mean() {
-        return (sum()/list.size());
+        return (sum()/this.list.size());
     }
     //Milos
     public double mode() {
         return 0.0;
     }   
-    //Searches for input number in list, if number exists, returns true
+    //Milos
     public boolean search() {
         System.out.println("Enter the number you want to find: ");
         double searchNum = sc.nextDouble();
@@ -51,17 +51,17 @@ public class Calculations implements TeamTask {
     public double range() {
         return 0.0;
     }
-    //Returns random number from the list
+    //Milos
     public double randNum() {
         Random rand = new Random();
-        int int_random = rand.nextInt(list.size() );
-        double random_num_list = list.get(int_random);
+        int int_random = rand.nextInt(this.list.size() );
+        double random_num_list = this.list.get(int_random);
         return random_num_list;
     }
     //Danial
     public double max() {
         ArrayList<Double> temp = new ArrayList<Double>();
-        temp.addAll(list);
+        temp.addAll(this.list);
 
         Collections.sort(temp);
         return temp.get(temp.size() - 1);
@@ -69,7 +69,7 @@ public class Calculations implements TeamTask {
     //Danial
     public double min() {
         ArrayList<Double> temp = new ArrayList<Double>();
-        temp.addAll(list);
+        temp.addAll(this.list);
 
         Collections.sort(temp);
         return temp.get(0);
@@ -77,7 +77,7 @@ public class Calculations implements TeamTask {
     //Danial
     public ArrayList<Double> sortAsc() {
         ArrayList<Double> temp = new ArrayList<Double>();
-        temp.addAll(list);
+        temp.addAll(this.list);
 
         Collections.sort(temp);
         return temp;
@@ -85,7 +85,7 @@ public class Calculations implements TeamTask {
     //Danial
     public ArrayList<Double> sortDesc() {
         ArrayList<Double> temp = new ArrayList<Double>();
-        temp.addAll(list);
+        temp.addAll(this.list);
 
         Collections.sort(temp, Collections.reverseOrder());
         return temp;
@@ -104,7 +104,7 @@ public class Calculations implements TeamTask {
 
         ArrayList<Double> temp = new ArrayList<Double>();
 
-        for (double i : list) {
+        for (double i : this.list) {
             if (num == 1 && i % 2 != 0) {
                 temp.add(i);
             } else if (num == 2 && i % 2 == 0) {
@@ -119,7 +119,7 @@ public class Calculations implements TeamTask {
         ArrayList<Double> temp = new ArrayList<Double>();
 
         double fact = 1.0;
-        for (double d : list) {
+        for (double d : this.list) {
             fact = 1.0;
             for (int i = 1; i <= (int) Math.round(d); i++) {
                 fact *= (double) i;
@@ -131,7 +131,7 @@ public class Calculations implements TeamTask {
     //Stephen
     public double sum() {
         Double sum = 0.0;
-        for (Double d : list) {
+        for (Double d : this.list) {
             sum += d;
         }
         return sum;
@@ -142,7 +142,7 @@ public class Calculations implements TeamTask {
 
         System.out.println("What exponent should be applied to the numbers?");
         double num = sc.nextDouble();
-        for (double d : list) {
+        for (double d : this.list) {
             temp.add(Math.pow(d, num)); 
         }
         return temp;
@@ -150,7 +150,7 @@ public class Calculations implements TeamTask {
     //Stephen
     public String median() {
         ArrayList<Double> temp = new ArrayList<Double>();
-        temp.addAll(list);
+        temp.addAll(this.list);
 
         Collections.sort(temp);
         if (temp.size()%2 == 0) {
