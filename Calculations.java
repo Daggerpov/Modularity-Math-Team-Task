@@ -8,22 +8,20 @@ import java.util.HashMap;
 
 public class Calculations implements TeamTask {
 
-    public Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
     private ArrayList<Double> list;
 	private Double[] arr;
 
 	public Calculations(ArrayList<Double> l) {
-        list = l;
-		// converting array list to regular array to use java sorting algorithms
+        this.list = l;
+
 		arr = new Double[getList().size()];
-	  	
-		// ArrayList to Array Conversion
-		for (int i = 0; i < (list.size()); i++){
-			arr[i] = list.get(i);
+		for (int i = 0; i < (this.list.size()); i++){
+			arr[i] = this.list.get(i);
 		}
     }
 	
-
+    //Get list
     public ArrayList<Double> getList() {
         return this.list;
     }
@@ -32,71 +30,52 @@ public class Calculations implements TeamTask {
     public double mean() {
         return (sum()/this.list.size());
     }
-    //Milos
+
     public ArrayList<Double> mode() {
-        ArrayList<Double> numList = list;
+        ArrayList<Double> numList = this.list;
         ArrayList<Double> returnList = new ArrayList<Double>();
 		HashMap<Double, Integer> numMap = new HashMap<Double, Integer>();
 
-        		int max = 0;
-		
-		for (Double num : numList) {
-			
-			if (numMap.get(num) != null) {
-				
-				numMap.put(num, numMap.get(num) + 1);
-				
-			} else {
-				
-				numMap.put(num, 1);
-				
+        int max = 0;
+		for (Double num : numList) {	
+			if (numMap.get(num) != null) {	
+				numMap.put(num, numMap.get(num) + 1);	
+			} else {	
+		    	numMap.put(num, 1);	
 			}
-			
 			if (numMap.get(num) > max) {
-				
-				max = numMap.get(num);
-				
-			}
-			
-		}
-        
-		
-		for (Double key : numMap.keySet()) {
-			
+				max = numMap.get(num);	
+			}	
+		} 
+		for (Double key : numMap.keySet()) {	
 			if (max == numMap.get(key)) {
-
-                returnList.add(key);
-							
-			}
-			
+                returnList.add(key);					
+			}	
 		}
-
-        return returnList;
-		
+        return returnList;	
 	}
     
-    //Milos
     public boolean search() {
         System.out.println("Enter the number you want to find: ");
         double searchNum = sc.nextDouble();
-        if (list.indexOf(searchNum) >= 0) {
+        if (this.list.indexOf(searchNum) >= 0) {
             return true;
         } else {
             return false;
         }
     }
 
-    //Milos
     public String range() {
         return Double.valueOf(min())+", "+Double.valueOf(max());
     }
-    //Milos
+
     public double randNum() {
         Random rand = new Random();
         int int_random = rand.nextInt(this.list.size() );
         double random_num_list = this.list.get(int_random);
         return random_num_list;
     }
+
     //Danial
     public double max() {
         ArrayList<Double> temp = new ArrayList<Double>();
@@ -105,7 +84,7 @@ public class Calculations implements TeamTask {
         Collections.sort(temp);
         return temp.get(temp.size() - 1);
     }
-    //Danial
+    
     public double min() {
         ArrayList<Double> temp = new ArrayList<Double>();
         temp.addAll(this.list);
@@ -113,7 +92,7 @@ public class Calculations implements TeamTask {
         Collections.sort(temp);
         return temp.get(0);
     }
-    //Danial
+    
     public ArrayList<Double> sortAsc() {
         ArrayList<Double> temp = new ArrayList<Double>();
         temp.addAll(this.list);
@@ -121,7 +100,7 @@ public class Calculations implements TeamTask {
         Collections.sort(temp);
         return temp;
     }
-    //Danial
+    
     public ArrayList<Double> sortDesc() {
         ArrayList<Double> temp = new ArrayList<Double>();
         temp.addAll(this.list);
@@ -129,9 +108,8 @@ public class Calculations implements TeamTask {
         Collections.sort(temp, Collections.reverseOrder());
         return temp;
     }
-    //Danial
+    
     public ArrayList<Double> evenOdd() {
-
         int num;
         while (true) {
             System.out.println("Type 1 to print all odd numbers and 2 to print even numbers: ");
@@ -142,8 +120,10 @@ public class Calculations implements TeamTask {
         }
 
         ArrayList<Double> temp = new ArrayList<Double>();
-
         for (double i : this.list) {
+            if (i % 1 != 0) {
+                continue;
+            }
             if (num == 1 && i % 2 != 0) {
                 temp.add(i);
             } else if (num == 2 && i % 2 == 0) {
@@ -167,7 +147,7 @@ public class Calculations implements TeamTask {
         }
         return temp;
     }
-    //Stephen
+    
     public double sum() {
         Double sum = 0.0;
         for (Double d : this.list) {
@@ -175,7 +155,7 @@ public class Calculations implements TeamTask {
         }
         return sum;
     }
-    //Stephen
+    
     public ArrayList<Double> powerOf() {
         ArrayList<Double> temp = new ArrayList<Double>();
 
@@ -186,7 +166,7 @@ public class Calculations implements TeamTask {
         }
         return temp;
     }
-    //Stephen
+    
     public String median() {
         ArrayList<Double> temp = new ArrayList<Double>();
         temp.addAll(this.list);
@@ -199,17 +179,12 @@ public class Calculations implements TeamTask {
         }
     }
 
-	//helper method to convert list to ArrayList so we can return them in that format
+	//Helper method to convert list to ArrayList so we can return them in that format
 	private static ArrayList<Double> arrayToArrayList(Double [] arr) {
 		return new ArrayList<>(Arrays.asList(arr));
 	}
 	
-	
-	//Sorting can be ascending and descending
-
-
-	
-    //Daniel does these:
+    //Daniel
     public ArrayList<Double> bubbleSort() {
 		int n = this.arr.length;
         for (int i = 0; i < n-1; i++)
@@ -223,9 +198,10 @@ public class Calculations implements TeamTask {
                 }
 		return arrayToArrayList(this.arr);
     }
+
     public ArrayList<Double> selectionSort() {
         int n = this.arr.length;
-  
+
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < n-1; i++)
         {
@@ -243,6 +219,7 @@ public class Calculations implements TeamTask {
         }
 		return arrayToArrayList(this.arr);
     }
+
     public ArrayList<Double> insertionSort() {
         int n = this.arr.length;
         for (int i = 1; i < n; ++i) {
@@ -260,14 +237,5 @@ public class Calculations implements TeamTask {
         }
 		return arrayToArrayList(this.arr);
     }
-    // public ArrayList<Double> quickSort() {
-    //     return list;
-    // }
-    // public ArrayList<Double> mergeSort() {
-    //     return list;
-    // }
-    // public ArrayList<Double> heapSort() {
-    //     return list;
-    // }
     
 }

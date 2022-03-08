@@ -35,13 +35,9 @@ interface TeamTask {
     //Danial
     ArrayList<Double> sortDesc();
 
-
     //Daniel does these:
     ArrayList<Double> bubbleSort();
     ArrayList<Double> selectionSort();
     ArrayList<Double> insertionSort();
-    // ArrayList<Double> quickSort();
-    // ArrayList<Double> mergeSort();
-    // ArrayList<Double> heapSort();
 
 }
