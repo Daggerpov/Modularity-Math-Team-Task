@@ -7,7 +7,7 @@ interface TeamTask {
     //Milos
     double mean();
     //Milos
-    double mode(); 
+    ArrayList<Double> mode(); 
     //Stephen
     String median();
     //Danial
@@ -15,7 +15,7 @@ interface TeamTask {
     //Danial
     double min();
     //Danial
-    double range();
+    String range();
     //Milos
     boolean search();
     //Stephen

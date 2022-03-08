@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class Calculations implements TeamTask {
 
@@ -32,9 +33,48 @@ public class Calculations implements TeamTask {
         return (sum()/this.list.size());
     }
     //Milos
-    public double mode() {
-        return 0.0;
-    }   
+    public ArrayList<Double> mode() {
+        ArrayList<Double> numList = list;
+        ArrayList<Double> returnList = new ArrayList<Double>();
+		HashMap<Double, Integer> numMap = new HashMap<Double, Integer>();
+
+        		int max = 0;
+		
+		for (Double num : numList) {
+			
+			if (numMap.get(num) != null) {
+				
+				numMap.put(num, numMap.get(num) + 1);
+				
+			} else {
+				
+				numMap.put(num, 1);
+				
+			}
+			
+			if (numMap.get(num) > max) {
+				
+				max = numMap.get(num);
+				
+			}
+			
+		}
+        
+		
+		for (Double key : numMap.keySet()) {
+			
+			if (max == numMap.get(key)) {
+
+                returnList.add(key);
+							
+			}
+			
+		}
+
+        return returnList;
+		
+	}
+    
     //Milos
     public boolean search() {
         System.out.println("Enter the number you want to find: ");
@@ -46,10 +86,9 @@ public class Calculations implements TeamTask {
         }
     }
 
-
     //Milos
-    public double range() {
-        return 0.0;
+    public String range() {
+        return Double.valueOf(min())+", "+Double.valueOf(max());
     }
     //Milos
     public double randNum() {
